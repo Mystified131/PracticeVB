@@ -3,8 +3,11 @@
     Const pixInc = 120
     Dim hgtInc As Double
     Dim xCoo As Int32
+    Dim yCoo As Int32
 
     Dim ctr As Int32
+
+    Dim sumplace As Double
 
 
     Private Sub Form1_Click(sender As Object, e As EventArgs) Handles Me.Click
@@ -33,12 +36,29 @@
         Debug.WriteLine("Morning is here.")
         ctr += 1
 
+        If (ctr >= 3) Then
+            Debug.WriteLine("")
+            Debug.WriteLine("Past nine already!.")
+
+        End If
+
         If (ctr >= 5) Then
             Debug.WriteLine("")
             Debug.WriteLine("Soon it will be noon.")
             ctr = 0
 
         End If
+
+    End Sub
+
+    Private Sub lblTotSum_Click(sender As Object, e As EventArgs) Handles lblTotSum.Click
+
+        xCoo = MousePosition.X
+        yCoo = MousePosition.Y
+
+        sumplace = xCoo + yCoo
+
+        lblTotSum.Text = (sumplace.ToString)
 
     End Sub
 End Class

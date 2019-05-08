@@ -26,6 +26,7 @@ Partial Class Form1
         Me.lblXCoo = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblTotSum = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -65,11 +66,20 @@ Partial Class Form1
         Me.Button2.Text = "Daytime"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'lblTotSum
+        '
+        Me.lblTotSum.BackColor = System.Drawing.SystemColors.Window
+        Me.lblTotSum.Location = New System.Drawing.Point(550, 259)
+        Me.lblTotSum.Name = "lblTotSum"
+        Me.lblTotSum.Size = New System.Drawing.Size(188, 80)
+        Me.lblTotSum.TabIndex = 4
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblTotSum)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblXCoo)
@@ -86,4 +96,5 @@ Partial Class Form1
     Friend WithEvents lblXCoo As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents lblTotSum As Label
 End Class
