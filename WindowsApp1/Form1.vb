@@ -4,6 +4,9 @@
     Dim hgtInc As Double
     Dim xCoo As Int32
 
+    Dim ctr As Int32
+
+
     Private Sub Form1_Click(sender As Object, e As EventArgs) Handles Me.Click
 
         hgtInc = (Me.Height) / pixInc
@@ -28,5 +31,14 @@
         BackColor = Color.Wheat
         Debug.WriteLine("")
         Debug.WriteLine("Morning is here.")
+        ctr += 1
+
+        If (ctr >= 5) Then
+            Debug.WriteLine("")
+            Debug.WriteLine("Soon it will be noon.")
+            ctr = 0
+
+        End If
+
     End Sub
 End Class
